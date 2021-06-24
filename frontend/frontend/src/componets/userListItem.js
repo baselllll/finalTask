@@ -8,7 +8,7 @@ const UserListItem = (props) => {
                     <Link to={`/user/${item._id}`}>
                     <div key={item._id} className="alert alert-dark d-flex justify-content-between">
                         <h1 className='align-self-start'>{item.Name}</h1>
-                        <h1><img className='rounded-circle w-50' src={`images/profile/${item.image}`} onError={(e)=>{ if (e.target.src !== "/images/profile/true_blue.jpg") 
+                        <h1><img className='rounded-circle w-50' src={`http://localhost:3333/assets/images/${item.image}`} onError={(e)=>{ if (e.target.src !== "/images/profile/true_blue.jpg") 
                           {e.target.src="/images/profile/true_blue.jpg"; } }} /></h1>
                     </div>
                     </Link>

@@ -18,7 +18,7 @@ const AllUserCom = () => {
                     <div className="col-6">
                       <div className=" mb-5 text-center">
                         <div className="border border-5"> 
-                          <img src={`/images/profile/${DataUser.image}`} className="card-img-top img-thumbnail rounded-circle w-25"
+                          <img src={`http://localhost:3333/assets/images/${DataUser.image}`} className="card-img-top img-thumbnail rounded-circle w-25"
                           onError={(e)=>{ if (e.target.src !== "/images/profile/true_blue.jpg") 
                           {e.target.src="/images/profile/true_blue.jpg"; } }}
                           />

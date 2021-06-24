@@ -43,7 +43,7 @@ const UserDetail = (props) => {
                        <button onClick={()=>{UpdateForm(Details._id)}} className="btn btn-primary btn-lg">Update</button>
                   </div>
                 </div>
-                <img src={`/images/profile/${Details.image}`} className="card-img-top img-thumbnail w-75" onError={(e)=>{ if (e.target.src !== "/images/profile/true_blue.jpg") 
+                <img src={`http://localhost:3333/assets/images/${Details.image}`} className="card-img-top img-thumbnail w-75" onError={(e)=>{ if (e.target.src !== "/images/profile/true_blue.jpg") 
                           {e.target.src="/images/profile/true_blue.jpg"; } }} />
                 <h2 className="card-title alert alert-dark">{Details.Name}</h2>
                 <h4 className="card-text alert alert-dark">{Details.Email}</h4>

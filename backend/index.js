@@ -10,7 +10,7 @@ app.use(express.urlencoded())
 app.use(cors())
 app.use(morgan('tiny'))
 
-app.use('/', express.static('./front-end'))
+app.use('/assets/images', express.static('./public/images'))
 
 //routes
 app.use('/api/user',userRouter)

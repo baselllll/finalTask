@@ -6,21 +6,14 @@ const Register = (props) => {
   const name = useRef();
   const email = useRef();
   const image = createRef();
-  // const [ImageShow,SetImageShow] = useState(<></>)
   let GetDateForm = () =>{
-    // console.log(name.current.value)
-    // console.log(email.current.value)
-    //  console.log(image.current.files[0])
-    //  let formdata = new FormData();
-    //  formdata.append('image',image.current.files[0])
-    //  formdata.append('name',"basel osama")
-    let user = {
-      Name:name.current.value,
-      Email:email.current.value,
-      image:image.current.files[0].name,
-    }
+     let formdata = new FormData();
+     formdata.append('photo',image.current.files[0])
+     formdata.append('Name',name.current.value)
+     formdata.append('Email',email.current.value)
+     formdata.append('image',image.current.files[0].name)
     
-    actions.AddNewUser(user).then((val) => { console.log(val) }).catch((err) => console.log(err))
+    actions.AddNewUser(formdata).then((val) => { console.log(val) }).catch((err) => console.log(err))
     props.history.push('/all-user')
   }
     return (

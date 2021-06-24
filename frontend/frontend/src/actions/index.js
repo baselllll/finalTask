@@ -69,10 +69,15 @@ export const UpdateById  = async (id,user)=>{
 
 
 const AddURL = "http://localhost:3333/api/user/add-user"
-export const AddNewUser  = async (user)=>{
+export const AddNewUser  = async (user,)=>{
     let response;
+    let config = {
+        headers:{
+            'content-type':'multipart/form-data'
+        }
+    }
     try {
-        response = await axios.post(`${AddURL}`,user)
+        response = await axios.post(`${AddURL}`,user,config)
     } catch (err) {
         console.log(err)
     }
